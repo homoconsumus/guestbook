@@ -1960,6 +1960,9 @@ progress {
     -webkit-overflow-scrolling: touch;
   }
 }
+.form-group {
+  margin: 15px 15px 15px;
+}
 .form-label {
   margin-bottom: 0.5rem;
 }
