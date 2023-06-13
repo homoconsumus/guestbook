@@ -4,6 +4,7 @@ import com.example.guestbook.dto.GuestbookDTO;
 import com.example.guestbook.dto.PageRequestDTO;
 import com.example.guestbook.dto.PageResultDTO;
 import com.example.guestbook.entity.Guestbook;
+import com.querydsl.core.BooleanBuilder;
 
 import java.util.Optional;
 
@@ -14,6 +15,7 @@ public interface GuestbookService {
     GuestbookDTO read(Long gno);
     void modify(GuestbookDTO dto);
     void remove(Long gno);
+    BooleanBuilder getSearch(PageRequestDTO requestDTO);
 
     default Guestbook dtoToEntity(GuestbookDTO dto){
         Guestbook entity = Guestbook.builder()
